@@ -4,7 +4,7 @@ import { Navbar } from '../components/Navbar'
 
 export const Layout = () => {
   return (
-    <div>
+    <div >
         <Navbar/>
         <Outlet/>
     </div>

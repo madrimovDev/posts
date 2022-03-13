@@ -6,7 +6,7 @@ import { Home } from './pages/Home'
 
 function App() {
 
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([])  
 
   useEffect(() => {
       fetch('https://jsonplaceholder.typicode.com/posts')
@@ -18,8 +18,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Layout/>}>
-            <Route index element={<Home posts={ posts.length !== 0 ? posts :  {title: 'Loading...', body: 'lodaing'} }/>}/>
-            <Route path="posts" element={<Posts/>}/>
+            <Route index element={<Home posts={ posts }/>}/>
+            <Route path="posts" element={<Posts posts={ posts }/>}/>
           </Route>
         </Routes>
       </div>
